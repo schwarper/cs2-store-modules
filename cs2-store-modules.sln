@@ -12,6 +12,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cs2-store-hilo", "cs2-store
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cs2-store-namebonus", "cs2-store-namebonus\cs2-store-namebonus.csproj", "{053DCB86-6F33-41B3-BC01-9F773B6D4F68}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cs2-store-coinflip", "cs2-store-coinflip\cs2-store-coinflip.csproj", "{F50BB1B8-CCBE-4F7A-B1E7-ADF624ED9D06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{053DCB86-6F33-41B3-BC01-9F773B6D4F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{053DCB86-6F33-41B3-BC01-9F773B6D4F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{053DCB86-6F33-41B3-BC01-9F773B6D4F68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F50BB1B8-CCBE-4F7A-B1E7-ADF624ED9D06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F50BB1B8-CCBE-4F7A-B1E7-ADF624ED9D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F50BB1B8-CCBE-4F7A-B1E7-ADF624ED9D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F50BB1B8-CCBE-4F7A-B1E7-ADF624ED9D06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

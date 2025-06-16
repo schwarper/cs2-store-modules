@@ -5,6 +5,7 @@ SlotMachine module for Store: Bet credits, spin the slots, and win based on matc
 Config will be auto generated. Default:
 ```json
 {
+    "{red}[Store] ",
     "min_bet": 10,
     "max_bet": 1000,
     "slot_machine_commands": [

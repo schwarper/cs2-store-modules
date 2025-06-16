@@ -5,6 +5,7 @@ Hi-Lo module for Store: Guess if the next card will be higher, lower, or equal. 
 Config will be auto generated. Default:
 ```json
 {
+  "tag", "{red}[Store] ",
   "min_bet": 10,
   "max_bet": 1000,
   "hi_lo_commands": [

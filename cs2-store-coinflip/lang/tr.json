@@ -1,0 +1,28 @@
+{
+    "You are already in": "{white}Yazı turaya çoktan katıldın.",
+    "Must be an integer": "{white}Girdiğiniz değer bir tamsayı olmalıdır.",
+    "No enough credits": "{white}Yeterli krediniz yok.",
+    "Min coinflip": "{white}Girdiğiniz değer {green}{0} {white}değerinden yüksek olmalıdır.",
+    "Max coinflip": "{white}Girdiğiniz değer {green}{0} {white}değerinden düşük olmalıdır.",
+    "Cannot join during warmup": "{white}Isınma sırasında yazı turaya katılamazsınız.",
+    "Coinflip feature is disabled": "{white}Yazı tura şu anda {darkred}devre dışı{white}.",
+    "Announce coinflip": "{white}Yazı tura bahisler için {green}açık{white}!",
+
+    "No duel invitations": "{white}Düello talebiniz yok.",
+    "Duel request sent": "{blue}{0} {white}adlı oyuncu {green}{1} {white}kredi değerinde yazı turaya davet ettiniz. Kabul etmesini bekleyin.",
+    "You declined the duel": "{white}Yazı tura davetiniz {darkred}reddedildi.",
+    "Duel request": "{blue}{0} {white}adlı oyuncu sizi {green}{1} {white}kredi değerinde yazı turaya davet etti.",
+    "Cannot challenge yourself": "{white}Kendinize meydan okuyamazsınız",
+    "Duel win message": "{white}Yazı turada {blue}{0} {white}adlı oyuncuyu {green}yendiniz {white}ve {green}{1} {white}kredi kazandınız.",
+    "Duel lose message": "{white}Yazı turada {blue}{0} {white}adlı oyuncuya {darkred}kaybettiniz {white}ve {green}{1}{white}kredi kaybettiniz.",
+    "Duel feature is disabled": "{white}Düello şu anda {darkred} devre dışı.",
+
+    "menu_title": "Yazı tura [Bahisiniz: {0}]",
+    "menu_options": "{0} [{1}x]",
+
+    "Heads": "Yazı",
+    "Tails": "Tura",
+
+    "Join coinflip": "{blue}{0} {red}{2}{white}ya {green}{1} {white}kredi yatırdı.",
+    "Winner coinflip": "Kazanan taraf: {0}"
+}
