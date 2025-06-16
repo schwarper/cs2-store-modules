@@ -1,0 +1,11 @@
+{
+    "Invalid amount of credits": "{white}Invalid amount of credits. Please enter a valid number",
+    "Minimum bet amount": "{white}Minimum bet amount is {green}{0} {white}credits",
+    "Maximum bet amount": "{white}Maximum bet amount is {green}{0} {white}credits",
+    "Not enough credits": "{white}You don't have enough credits to place this bet",
+    "Result": "{white}Result: {green}{0}",
+    "Winnings": "{white}Winnings: {green}{0} {white}credits",
+    "2 Symbols": "{white}Two matching symbols! Partial reward: {green}{0} {white}credits",
+    "You lost your bet": "{white}You lost your bet of {green}{0} {white}credits",
+    "In cooldown": "{white}You must wait {red}{0} {white}seconds before starting another slot machine"
+}

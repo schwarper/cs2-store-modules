@@ -1,0 +1,11 @@
+{
+    "Invalid amount of credits": "{white}Geçersiz kredi miktarı. Lütfen geçerli bir sayı girin.",
+    "Minimum bet amount": "{white}Minimum bahis miktarı {green}{0} {white}kredi.",
+    "Maximum bet amount": "{white}Maksimum bahis miktarı {green}{0} {white}kredi.",
+    "Not enough credits": "{white}Bu bahsi oynamak için yeterli krediniz yok",
+    "Result": "{white}Sonuç: {green}{0}",
+    "Winnings": "{white}Kazanç: {green}{0} {white}kredi",
+    "2 Symbols": "{white}İki eşleşen sembol! Kısmi ödül: {green}{0} {white}kredi",
+    "You lost your bet": "{green}{0} {white}kredilik bahisinizi kaybettiniz.",
+    "In cooldown": "{white}Yeni bir slot makinesi başlatmadan önce {red}{0} {white}saniye beklemelisiniz."
+}

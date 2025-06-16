@@ -1,0 +1,11 @@
+{
+    "Invalid amount of credits": "{white}Quantidade inválida de créditos. Por favor, insira um número válido",
+    "Minimum bet amount": "{white}A quantidade mínima para aposta é {green}{0} {white}créditos",
+    "Maximum bet amount": "{white}A quantidade máxima para aposta é {green}{0} {white}créditos",
+    "Not enough credits": "{white}Você não tem créditos o suficiente para essa aposta",
+    "Result": "{white}Resultado: {green}{0}",
+    "Winnings": "{white}Ganhos: {green}{0} {white}créditos",
+    "2 Symbols": "{white}Dois símbolos correspondentes! Recompensa parcial: {green}{0} {white}créditos",
+    "You lost your bet": "{white}Você perdeu a aposta de {green}{0} {white}créditos",
+    "In cooldown": "{white}Você deve esperar {red}{0} {white}segundos antes de iniciar outro caça níquel"
+}
