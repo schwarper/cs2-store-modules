@@ -1,0 +1,15 @@
+{
+    "Invalid amount of credits": "{white}IGeçersiz kredi miktarı. Lütfen geçerli miktar girin.",
+    "Invalid multiplier": "{white}IGeçersiz çarpan. Lütfen geçerli bir sayı girin.",
+    "Minimum bet amount": "{white}IMinimum bahis miktarı {green}{0} {white}kredi.",
+    "Maximum bet amount": "{white}IMaksimum bahis miktarı {green}{0} {white}kredi.",
+    "Multiplier range": "{white}IÇarpan {green}{0} {white}ve {green}{1} {white}arasında olmalıdır.",
+    "Not enough credits": "{white}IYeterli kredin yok!",
+    "Bet placed": "{white}IBahis {green}{0} {white}kredi ve {green}{1} {white}çarpanla oynandı.",
+    "Bet win": "{white}ITebrikler! {green}{1} {white}çarpanla {green}{0} {white}kredi kazandın. Kaza {green}{0} {white}çarpanda gerçekleşti.",
+    "Bet lost": "{white}IMaalesef, {green}{1} {white}kredi kaybettiniz. Kaza {green}{0} {white}çarpanda gerçekleşti.",
+    "In cooldown": "{white}IBaşka bir crash oyunu başlatmadan önce {red}{0} {white}saniye beklemelisiniz.",
+  
+    "Current multiplier": "Çarpan: ",
+    "Multiplier crashed": "Crash Şurada Patladı: "
+}

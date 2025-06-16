@@ -1,0 +1,110 @@
+name: Build and Release Plugins
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - 'README.md'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore cs2-store-modules.sln
+
+    - name: Build solution
+      run: dotnet build cs2-store-modules.sln --configuration Release --no-restore
+
+    - name: Prepare zipped plugin outputs
+      run: |
+        mkdir -p artifacts
+        
+        declare -A plugin_map
+        
+        for dir in BuildOutput/plugins/*/; do
+          if [ -d "$dir" ]; then
+            plugin_name=$(basename "$dir")
+            plugin_map["$plugin_name"]="$dir"
+          fi
+        done
+        
+        for plugin_name in "${!plugin_map[@]}"; do
+          source_path="${plugin_map[$plugin_name]}"
+          
+          if [ ! -d "$source_path" ]; then
+            echo "Warning: Source directory '$source_path' for plugin '$plugin_name' does not exist. Skipping this plugin."
+            continue
+          fi
+
+          mkdir -p "plugins_staging/$plugin_name"
+          cp -r "${source_path}/." "plugins_staging/${plugin_name}/"
+          
+          cd plugins_staging
+          zip -r "../artifacts/$plugin_name.zip" "$plugin_name"
+          cd -
+          rm -rf plugins_staging
+        done
+
+    - name: Create combined plugins zip (with folders inside)
+      run: |
+        mkdir -p plugins 
+        
+        declare -A plugin_map
+        for dir in BuildOutput/plugins/*/; do
+          if [ -d "$dir" ]; then
+            plugin_name=$(basename "$dir")
+            plugin_map["$plugin_name"]="$dir"
+          fi
+        done
+
+        for plugin_name in "${!plugin_map[@]}"; do
+          source_path="${plugin_map[$plugin_name]}"
+          
+          if [ ! -d "$source_path" ]; then
+            echo "Warning: Source directory '$source_path' for plugin '$plugin_name' does not exist. Skipping this plugin for combined zip."
+            continue
+          fi
+          
+          mkdir -p "plugins/$plugin_name"
+          cp -r "${source_path}/." "plugins/${plugin_name}/"
+        done
+        
+        zip -r "artifacts/all-plugins.zip" plugins/*
+        
+        rm -rf plugins
+
+    - name: Delete previous release (if exists)
+      uses: dev-drprasad/delete-tag-and-release@v1.1
+      with:
+        tag_name: latest
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Create new release
+      uses: softprops/action-gh-release@v2
+      with:
+        name: "Build"
+        tag_name: latest
+        draft: false
+        body: |
+          ### Feedback:
+          If you encounter any issues, please report them [here](https://github.com/schwarper/cs2-store-modules/issues).
+
+          ---
+          ### Support:
+          If you'd like to support the continued development of this project, you can do so by [buying me a coffee](https://buymeacoffee.com/schwarper). Your support is genuinely appreciated.
+        files: artifacts/*.zip

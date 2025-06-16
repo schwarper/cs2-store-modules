@@ -1,0 +1,15 @@
+{
+    "Invalid amount of credits": "{white}Invalid amount of credits. Please enter a number",
+    "Invalid multiplier": "{white}Invalid multiplier. Please enter a valid number",
+    "Minimum bet amount": "{white}Minimum bet amount is {green}{0} {white}credits",
+    "Maximum bet amount": "{white}Maximum bet amount is {green}{0} {white}credits",
+    "Multiplier range": "{white}Multiplier must be between {green}{0} {white}and {green}{1}",
+    "Not enough credits": "{white}You do not have enough credits to place this bet",
+    "Bet placed": "{white}Bet placed for {green}{0} {white}credits with target multiplier of {green}{1}",
+    "Bet win": "{white}Congratulations! You won {green}{0} {white}credits with a multiplier of {green}{1}{white}. The crash occurred at {green}{2}",
+    "Bet lost": "{white}Unfortunately, the multiplier crashed at {green}{0}{white}. You bet {green}{1}{white}. Better luck next time!",
+    "In cooldown": "{white}You must wait {red}{0} {white}seconds before starting another crash",
+    
+    "Current multiplier": "Current Multiplier: ",
+    "Multiplier crashed": "Multiplier Crashed at: "
+}

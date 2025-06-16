@@ -1,0 +1,6 @@
+{
+    "Quiz.Question": "{white}{0}",
+    "Quiz.AnsweredCorrectly": "{blue}{0} {white}answered {green}correctly!",
+    "Quiz.Awarded": "{blue}{0} {white}have been awarded {green}{1} {white}credits",
+    "Quiz.AlreadyAnswered": "{white}Question already answered. Wait for next."
+}

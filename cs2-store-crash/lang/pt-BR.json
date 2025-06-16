@@ -1,0 +1,15 @@
+{
+    "Invalid amount of credits": "{white}IQuantidade de créditos inválida. Por favor, insira um número",
+    "Invalid multiplier": "{white}IMultiplicador inválido. Por favor, insira um número válido",
+    "Minimum bet amount": "{white}IA quantidade mínima para aposta é {green}{0} {white}créditos",
+    "Maximum bet amount": "{white}IA quantidade máxima para aposta é {green}{0} {white}créditos",
+    "Multiplier range": "{white}IO multiplicador precisa ser entre {green}{0} {white}e {green}{1}",
+    "Not enough credits": "V{white}Iocê não tem créditos suficiente para essa aposta",
+    "Bet placed": "{white}IVocê apostou {green}{0} {white}créditos com o multiplicador de {green}{1}",
+    "Bet win": "{white}IParabéns! Você ganhou {green}{0} {white}créditos com o multiplicador de {green}{1}{white}. O crash aconteceu em {green}{2}",
+    "Bet lost": "{white}IInfelizmente, o multiplicador crashou em {green}{0}{white}. Você apostou {green}{1}{white}. Boa sorte da próxima vez!",
+    "In cooldown": "{white}IVocê deve esperar {red}{0} {white}segundos antes de iniciar outro crash",
+    
+    "Current multiplier": "Multiplicador atual: ",
+    "Multiplier crashed": "O multiplicador crashou em: "
+}
