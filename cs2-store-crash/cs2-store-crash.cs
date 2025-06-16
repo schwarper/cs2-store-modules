@@ -1,9 +1,9 @@
 using CounterStrikeSharp.API.Core;
+using CounterStrikeSharp.API.Core.Translations;
 using CounterStrikeSharp.API.Modules.Commands;
 using StoreApi;
 using System.Collections.Concurrent;
 using System.Text.Json.Serialization;
-using CounterStrikeSharp.API.Core.Translations;
 
 namespace Store_Crash;
 
@@ -11,7 +11,7 @@ public class StoreCrashConfig : BasePluginConfig
 {
     [JsonPropertyName("tag")]
     public string Tag { get; set; } = "{red}[Store] ";
-    
+
     [JsonPropertyName("min_bet")]
     public int MinBet { get; set; } = 10;
 
@@ -88,7 +88,7 @@ public class StoreCrash : BasePlugin, IPluginConfig<StoreCrashConfig>
     public void OnConfigParsed(StoreCrashConfig config)
     {
         config.Tag = config.Tag.ReplaceColorTags();
-        
+
         config.MinBet = Math.Max(0, config.MinBet);
         config.MaxBet = Math.Max(config.MinBet + 1, config.MaxBet);
 

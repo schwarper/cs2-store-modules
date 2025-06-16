@@ -1,9 +1,9 @@
-using System.Collections.Concurrent;
-using System.Text.Json.Serialization;
 using CounterStrikeSharp.API.Core;
 using CounterStrikeSharp.API.Core.Translations;
 using CounterStrikeSharp.API.Modules.Commands;
 using StoreApi;
+using System.Collections.Concurrent;
+using System.Text.Json.Serialization;
 
 namespace Store_SlotMachine;
 
@@ -11,7 +11,7 @@ public class StoreSlotMachineConfig : BasePluginConfig
 {
     [JsonPropertyName("tag")]
     public string Tag { get; set; } = "{red}[Store]";
-    
+
     [JsonPropertyName("min_bet")]
     public int MinBet { get; set; } = 10;
 
@@ -19,7 +19,7 @@ public class StoreSlotMachineConfig : BasePluginConfig
     public int MaxBet { get; set; } = 1000;
 
     [JsonPropertyName("slot_machine_commands")]
-    public List<string> SlotMachineCommands { get; set; } =  [ "slotmachine" ];
+    public List<string> SlotMachineCommands { get; set; } = ["slotmachine"];
 
     [JsonPropertyName("slotmachine_command_cooldown")]
     public int SlotMachineCommandCooldown { get; set; } = 10;
@@ -99,7 +99,7 @@ public class StoreSlotMachine : BasePlugin, IPluginConfig<StoreSlotMachineConfig
     public void OnConfigParsed(StoreSlotMachineConfig config)
     {
         config.Tag = config.Tag.ReplaceColorTags();
-        
+
         config.MinBet = Math.Max(0, config.MinBet);
         config.MaxBet = Math.Max(config.MinBet + 1, config.MaxBet);
 
@@ -260,7 +260,7 @@ public class StoreSlotMachine : BasePlugin, IPluginConfig<StoreSlotMachineConfig
         double totalChance = Config.RewardMultipliers.Sum(kv => kv.Value.Chance);
         double randomNumber = _random.NextDouble() * totalChance;
 
-        foreach (var symbol in Config.RewardMultipliers)
+        foreach (KeyValuePair<string, SlotMachineSymbol> symbol in Config.RewardMultipliers)
         {
             if (randomNumber < symbol.Value.Chance)
             {

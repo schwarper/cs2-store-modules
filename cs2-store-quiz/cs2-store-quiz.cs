@@ -1,17 +1,17 @@
-﻿using System.Text.Json.Serialization;
-using CounterStrikeSharp.API;
+﻿using CounterStrikeSharp.API;
 using CounterStrikeSharp.API.Core;
 using CounterStrikeSharp.API.Core.Translations;
 using CounterStrikeSharp.API.Modules.Commands;
 using StoreApi;
+using System.Text.Json.Serialization;
 
 namespace Store_Quiz
 {
     public class StoreQuizConfig : BasePluginConfig
     {
-        [JsonPropertyName("tag")] 
+        [JsonPropertyName("tag")]
         public string Tag { get; set; } = "{red}[Store] ";
-        
+
         [JsonPropertyName("question_interval_seconds")]
         public int QuestionIntervalSeconds { get; set; } = 30;
 
@@ -111,13 +111,13 @@ namespace Store_Quiz
 
             if (_questionAnswered)
                 return HookResult.Continue;
-            
+
             string answer = message.GetArg(1);
             Question currentQuestion = Config.Questions[_currentQuestionIndex];
 
             if (!answer.Equals(currentQuestion.Answer, StringComparison.OrdinalIgnoreCase))
                 return HookResult.Continue;
-            
+
             _questionAnswered = true;
             Server.PrintToChatAll(Config.Tag + Localizer["Quiz.AnsweredCorrectly", player.PlayerName]);
 
@@ -145,7 +145,7 @@ namespace Store_Quiz
 
                 if (!answer.Equals(currentQuestion.Answer, StringComparison.OrdinalIgnoreCase))
                     return HookResult.Continue;
-                
+
                 _questionAnswered = true;
                 Server.PrintToChatAll(Config.Tag + Localizer["Quiz.AnsweredCorrectly", player.PlayerName]);
 

@@ -1,0 +1,21 @@
+# [Store module] Name Bonus
+Name Bonus module for Store: Awards players bonus credits if their name contains specific promotional texts, with customizable intervals and bonus amounts.
+
+# Config
+Config will be auto generated. Default:
+```json
+{
+  "tag": "{red}[Store] ",
+  "ad_texts": [
+    "YourAd1",
+    "YourAd2"
+  ],
+  "bonus_credits": 100,
+  "interval_in_seconds": 300,
+  "show_ad_message": true,
+  "ad_message_delay_seconds": 120,
+  "ad_message": "Add '{blue}YourAd{white}' to your nickname and earn bonus credits!",
+  "show_ad_message_to_non_advertisers_only": true,
+  "ConfigVersion": 1
+}
+```

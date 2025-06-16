@@ -1,0 +1,16 @@
+{
+    "Bet placed": "{green}{0} {white}kredi ile bahse girdin.",
+    "Initial multiplier": "{white}Başlangıç çarpanı: {green}{0}x",
+    "Current card": "{white}Şu anki kart: {red}{0}",
+    "Make guess": "{white}Tahminini yap: '{green}!high{white}', '{blue}!low{white}', '{orange}!equal{white}' veya nakde çevir: '{red}!cashout{white}'",
+    "Correct guess": "{green}Doğru{white} tahmin ettin! Çarpanınız arttı",
+    "Current multiplier": "{white}Şu anki çarpanınız: {green}{0}x",
+    "Incorrect guess": "{red}Yanlış {white}tahmin ettin! Sonraki kart: {red}{0}",
+    "Cash out": "{green}{1}x{white} çarpan ile {green}{0} {white}krediyi nakde çevirdiniz. Toplam: {green}{2}{white}, kazanç {green}{3} {white}kredi",
+    "Game ended": "{white}Oyun bitti. Ardışık olarak {green}{0} {white}kere tahmin ettiniz. Son çarpanınız {green}{1}x{white}. {green}{2} {white}kredi kaybettiniz, bahsiniz: {green}{3}{white}",
+    "No active game": "{white}Aktif bir Hi-Lo oyununuz yok. {green}!hilo <bahis miktarı> {white}yazarak bir tane başlatabilirsin.",
+    "Invalid amount of credits": "{white}Geçersiz kredi miktarı. Lütfen geçerli bir sayı girin.",
+    "Minimum bet amount": "{white}Minimum bahis miktarı {green}{0} {white}kredi",
+    "Maximum bet amount": "{white}Maksimum bahis miktarı {green}{0} {white}kredi",
+    "Not enough credits": "{white}Bu bahsi oynamak için yeterli krediniz yok."
+}
